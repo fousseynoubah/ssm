@@ -14,7 +14,7 @@ Sys.setenv(TZ="Africa/Bamako") #Sys.getenv("TZ") # verifier / to check
 library(tidyverse)
 library(readxl)
 library(downloader)
-library(rgdal)
+library(rgdal) 
 library(sf)
 
 
