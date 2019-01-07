@@ -23,6 +23,26 @@
       {
         "en": "Based on data from http://malilink.net/attaques-terroriste-au-mali/",
         "fr": "A partir de données tirées de http://malilink.net/attaques-terroriste-au-mali/"
+        
+      },
+      {
+        "en": "Dead, Injured",
+        "fr": "Morts, Bléssés"
+        
+      },
+      {
+        "en": "Dead, No injured",
+        "fr": "Morts, Pas de bléssés"
+        
+      },
+      {
+        "en": "No dead, Injured",
+        "fr": "Pas de morts, Bléssés"
+      },
+      {
+        "en": "No dead, No injured",
+        "fr": "Pas de morts, Pas de bléssés"
       }
+
     ]
 }
