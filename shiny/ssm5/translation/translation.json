@@ -1,0 +1,28 @@
+{
+  "languages": ["en", "fr"],
+  "translation": [
+      {
+        "en": "Year", 
+        "fr": "Année"
+        
+      },
+      {
+        "en": "Severity", 
+        "fr": "Sévérité"
+        
+      },
+      {
+        "en": "Number of incidents", 
+        "fr": "Nombre d'incidents"
+        
+      },
+      {
+        "en": "Mapping the points, by severity",
+        "fr": "Cartographie des points, par sévérité"
+      },
+      {
+        "en": "Based on data from http://malilink.net/attaques-terroriste-au-mali/",
+        "fr": "A partir de données tirées de http://malilink.net/attaques-terroriste-au-mali/"
+      }
+    ]
+}
