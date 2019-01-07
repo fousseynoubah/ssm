@@ -52,24 +52,24 @@ map_adm3_sf <- shp_list[[3]]
 
 
 ### Transformation des shapefiles / Transforming the shapefiles (sp objects)
-shp_list <- list()
+#shp_list <- list()
 
-for(i in 1:nrow(map_df)){
-  myshp <- readOGR(paste0(map_df[i, "name"],"/","mli_admbnda_adm", i ,"_pop_2017.shp"))
-  shp_list[[i]] <- maps::map(myshp) %>% 
-    fortify() %>%
-    mutate(region = as.numeric(region)) %>% # fortify created a string instead of a numeric variable
-    left_join(data.frame(myshp@data) %>%
-                rename(region = OBJECTID) %>%
-                mutate(region = region - 1), 
-              by = c("region"))
-  rm(myshp)
-  rm(i)
-}
+#for(i in 1:nrow(map_df)){
+#  myshp <- readOGR(paste0(map_df[i, "name"],"/","mli_admbnda_adm", i ,"_pop_2017.shp"))
+# shp_list[[i]] <- maps::map(myshp) %>% 
+#   fortify() %>%
+#   mutate(region = as.numeric(region)) %>% # fortify created a string instead of a numeric variable
+#   left_join(data.frame(myshp@data) %>%
+#               rename(region = OBJECTID) %>%
+#               mutate(region = region - 1), 
+#             by = c("region"))
+# rm(myshp)
+# rm(i)
+#}
 
-map_adm1_sp <- shp_list[[1]] %>% as_data_frame()
-map_adm2_sp <- shp_list[[2]] %>% as_data_frame()
-map_adm3_sp <- shp_list[[3]] %>% as_data_frame()
+#map_adm1_sp <- shp_list[[1]] %>% as_data_frame()
+#map_adm2_sp <- shp_list[[2]] %>% as_data_frame()
+#map_adm3_sp <- shp_list[[3]] %>% as_data_frame()
 
 ### Remove unneeded objects
 #Zip files
