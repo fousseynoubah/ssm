@@ -17,6 +17,16 @@
         
       },
       {
+        "en": "Map", 
+        "fr": "Carte"
+        
+      },
+      {
+        "en": "Graph", 
+        "fr": "Graphique"
+        
+      },
+      {
         "en": "Number of incidents", 
         "fr": "Nombre d'incidents"
         
