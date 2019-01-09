@@ -8,7 +8,7 @@ library(tidyverse)
 Sys.setenv(TZ="Africa/Bamako") #Sys.getenv("TZ") # to check
 
 # The json file with translations ----
-i18n <- Translator$new(translation_json_path = "https://raw.githubusercontent.com/fousseynoubah/ssm/master/shiny/ssm5/translation/translation.json")
+i18n <- Translator$new(translation_json_path = "https://raw.githubusercontent.com/fousseynoubah/ssm/master/shiny/translations/translation.json")
 
 # Choose the language
 i18n$set_translation_language("en")
@@ -25,7 +25,7 @@ ui <- fluidPage(
                   label = i18n$t("Year"),
                   choices = c(2015, 2016, 2017, 2018), 
                   selected = 2015
-),
+      ),
       selectInput(inputId = "myseverity", 
                   label = i18n$t("Severity"), 
                   choices = c(i18n$t("Dead, Injured"), 
@@ -33,7 +33,7 @@ ui <- fluidPage(
                               i18n$t("No dead, Injured"), 
                               i18n$t("No dead, No injured")),
                   selected = i18n$t("Dead, Injured")
-                  )
+      )
     ),
     
     mainPanel(plotOutput("plot"))
@@ -42,7 +42,7 @@ ui <- fluidPage(
 
 # Server logic ----
 server <- function(input, output) {
-
+  
   # Data frame
   dataset <- reactive({
     datatest <- 
@@ -72,17 +72,18 @@ server <- function(input, output) {
   output$plot <- renderPlot({
     ggplot() +
       # Map / Carte
-      geom_sf(data = map_adm2_sf, fill = "grey35", colour = "grey45", size = 0.015) +
+      geom_sf(data = map_adm2_sf, fill = "grey20", colour = "grey30", size = 0.015) +
       theme(
         axis.text = element_blank(),
         axis.ticks = element_blank(),
-        panel.background = element_rect(fill = "transparent")
+        panel.grid = element_line(colour = "transparent"),
+        panel.background = element_rect(fill = "transparent", colour = "transparent")
       ) +
       # Points / Points
       geom_point(
         data = dataset(),
         mapping = aes(x = longitude, y = latitude, size = n),
-        alpha = 0.4, colour = "darkorange"
+        alpha = 0.5, colour = "orange"
       ) + 
       theme(plot.caption = element_text(size = 8)) +
       labs(x = "", y = "", size = i18n$t("Number of incidents"), # en
