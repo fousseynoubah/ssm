@@ -1,7 +1,8 @@
 # Load packages ----
 library(shiny)
 library(shiny.i18n)
-library(tidyverse)
+library(dplyr)
+library(ggplot2)
 
 
 # Time zone ----
