@@ -17,6 +17,16 @@
         
       },
       {
+        "en": "Map", 
+        "fr": "Carte"
+        
+      },
+      {
+        "en": "Graph", 
+        "fr": "Graphique"
+        
+      },
+      {
         "en": "Number of incidents", 
         "fr": "Nombre d'incidents"
         
@@ -24,6 +34,18 @@
       {
         "en": "Mapping the points, by severity",
         "fr": "Cartographie des points, par sévérité"
+      },
+      {
+        "en": "Agregating the incidents, by severity",
+        "fr": "Agrégation des incidents, par sévérité"
+      },
+      {
+        "en": "Identifying the region",
+        "fr": "Identifer la région"
+      },
+      {
+        "en": "Identifying the hotspots",
+        "fr": "Identifer les points chauds"
       },
       {
         "en": "Based on data from http://malilink.net/attaques-terroriste-au-mali/",
