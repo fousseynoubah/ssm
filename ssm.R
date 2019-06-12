@@ -23,7 +23,7 @@ library(sf)
 ########################################/// MAPPING : DOWNLOADING AND TRANSFORMING THE SHAPEFILES
 ##########################################################################
 ### Data frame
-map_df <- data_frame(name = c("adm1", "adm2", "adm3"),
+map_df <- tibble(name = c("adm1", "adm2", "adm3"),
                      link = c("https://data.humdata.org/dataset/3feaf6d7-8b21-4db1-a097-fa8a2b680a89/resource/1f4755a2-b3d7-4634-9273-430048d40684/download/mli_admbnda_adm1_pop_2017.zip",
                               "https://data.humdata.org/dataset/3feaf6d7-8b21-4db1-a097-fa8a2b680a89/resource/bc251c53-9c78-48b2-ab8f-c92d9269faf2/download/mli_admbnda_adm2_pop_2017.zip",
                               "https://data.humdata.org/dataset/3feaf6d7-8b21-4db1-a097-fa8a2b680a89/resource/303f57d8-965f-4c70-a081-3e5e0fcba2bf/download/mli_admbnda_adm3_pop_2017.zip"))
